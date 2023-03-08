@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:soprts_buissens_sciences_technology/Layout/cubit/cubit.dart';
 import 'package:soprts_buissens_sciences_technology/Layout/cubit/state.dart';
 import 'package:soprts_buissens_sciences_technology/components/components.dart';
-import 'package:soprts_buissens_sciences_technology/widget/buiderItem.dart';
+
 
 class BusinessScreen extends StatelessWidget {
   const BusinessScreen({Key? key}) : super(key: key);

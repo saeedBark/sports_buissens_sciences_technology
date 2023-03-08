@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 ThemeData themeLight = ThemeData(
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
       titleTextStyle: TextStyle(color: Colors.black, fontSize: 24),
       elevation: 0,
@@ -15,10 +15,11 @@ ThemeData themeLight = ThemeData(
       )),
   scaffoldBackgroundColor: Colors.white,
   primarySwatch: Colors.deepOrange,
-  textTheme: TextTheme(
+  textTheme: const TextTheme(
     titleLarge: TextStyle(color: Colors.black,fontSize: 20),
+    //titleLarge: TextStyle(color: Colors.red,fontSize: 20),
   ),
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     showUnselectedLabels: true,
     selectedItemColor: Colors.deepOrange,
@@ -28,7 +29,7 @@ ThemeData themeLight = ThemeData(
 );
 
 ThemeData themeDark = ThemeData(
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF00001a),
       titleTextStyle: TextStyle(color: Colors.white,fontSize: 24),
       elevation: 0,
@@ -42,13 +43,15 @@ ThemeData themeDark = ThemeData(
       )
   ),
 
-  scaffoldBackgroundColor: Color(0xFF00001a),
+  scaffoldBackgroundColor: const Color(0xFF00001a),
   primarySwatch: Colors.deepOrange,
-  textTheme: TextTheme(
+  textTheme: const TextTheme(
     titleLarge: TextStyle(color: Colors.white,fontSize: 24),
 
+
+
   ),
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     showUnselectedLabels: true,
     selectedItemColor:Colors.deepOrange,

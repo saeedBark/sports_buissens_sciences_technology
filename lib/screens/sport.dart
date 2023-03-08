@@ -3,11 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:soprts_buissens_sciences_technology/Layout/cubit/cubit.dart';
 import 'package:soprts_buissens_sciences_technology/Layout/cubit/state.dart';
 import 'package:soprts_buissens_sciences_technology/components/components.dart';
-import 'package:soprts_buissens_sciences_technology/widget/buiderItem.dart';
-//import 'package:soprts_buissens_sciences_technology/widget/buiderItem.dart';
 
-class SporScreen extends StatelessWidget {
-  const SporScreen({Key? key}) : super(key: key);
+
+class SportScreen extends StatelessWidget {
+  const SportScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

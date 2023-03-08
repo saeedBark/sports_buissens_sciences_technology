@@ -1,9 +1,8 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soprts_buissens_sciences_technology/widget/buiderItem.dart';
 
-Widget myDivider() => Divider(
+Widget myDivider() => const Divider(
       thickness: 1,
     );
 
@@ -15,7 +14,7 @@ Widget listViewBuilder(context, list) => ConditionalBuilder(
         separatorBuilder: (context, index) => myDivider(),
         itemCount: 10,
       ),
-      fallback: (context) => Center(child: CircularProgressIndicator()),
+      fallback: (context) => const Center(child: CircularProgressIndicator()),
     );
 
 ///////////////
@@ -47,6 +46,6 @@ Widget defaultFormFile({
         labelText: lable,
         prefixIcon: Icon(prefix),
         suffixIcon: suffix != null ? Icon(suffix) : null,
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );

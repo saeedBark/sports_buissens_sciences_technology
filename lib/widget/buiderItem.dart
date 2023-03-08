@@ -11,7 +11,7 @@ Widget builerItemApp(context, item) {
     },
     child: Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: SizedBox(
         height: 120,
         child: Row(
           // mainAxisAlignment: MainAxisAlignment.start,
@@ -27,7 +27,7 @@ Widget builerItemApp(context, item) {
                     fit: BoxFit.cover,
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Expanded(
@@ -38,21 +38,17 @@ Widget builerItemApp(context, item) {
                   Expanded(
                     child: Text(
                       '${item['title']} ',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.titleLarge,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  Text(
-                    '${item['source']['name']}',
-                    style: TextStyle(color: Colors.deepOrangeAccent),
-                  ),
-                  SizedBox(
+                  const SizedBox(
                     height: 7,
                   ),
                   Text(
                     '${item['publishedAt']}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.grey,
                     ),
                   ),

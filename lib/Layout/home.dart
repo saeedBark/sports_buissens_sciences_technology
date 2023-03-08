@@ -17,7 +17,7 @@ class HomeSports extends StatelessWidget {
         var cubit = AppCubit.get(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text(
+            title: const Text(
               'Sport App',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
@@ -30,13 +30,13 @@ class HomeSports extends StatelessWidget {
                         builder: (context) => SearchScreen(),
                       ));
                 },
-                icon: Icon(Icons.search),
+                icon: const Icon(Icons.search),
               ),
               IconButton(
                 onPressed: () {
                   cubit.changeMode();
                 },
-                icon: Icon(Icons.brightness_4_outlined),
+                icon: const Icon(Icons.brightness_4_outlined),
               ),
             ],
           ),

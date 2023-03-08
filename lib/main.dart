@@ -22,7 +22,7 @@ void main() async {
 }
 
 class Sport extends StatelessWidget {
-  Sport(this.isDark);
+ const Sport(this.isDark, {super.key});
   final bool? isDark;
 
   // This widget is the root of your application.
@@ -47,7 +47,7 @@ class Sport extends StatelessWidget {
             darkTheme: themeDark,
             themeMode:
                 AppCubit.get(context).isDark ? ThemeMode.dark : ThemeMode.light,
-            home: Directionality(
+            home:const Directionality(
                 textDirection: TextDirection.rtl, child: HomeSports()),
           );
         },

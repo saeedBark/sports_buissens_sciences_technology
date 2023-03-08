@@ -17,21 +17,21 @@ class AppCubit extends Cubit<AppState> {
   var currentIndex = 0;
 
   List<BottomNavigationBarItem> bottom = [
-    BottomNavigationBarItem(icon: Icon(Icons.sports_soccer), label: 'الرياضة'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(icon: Icon(Icons.sports_soccer), label: 'الرياضة'),
+    const BottomNavigationBarItem(
         icon: Icon(Icons.perm_device_information_outlined),
         label: 'التكنولوجيا'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(Icons.business_center_outlined), label: 'الأعمال'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(Icons.science_outlined), label: 'العلوم'),
   ];
 
   List<Widget> screens = [
-    SporScreen(),
-    TechnologiScreen(),
-    BusinessScreen(),
-    ScienceScreen(),
+    const SportScreen(),
+    const TechnologiScreen(),
+    const BusinessScreen(),
+    const ScienceScreen(),
   ];
 
   void changeBottom(int index) {
@@ -42,15 +42,15 @@ class AppCubit extends Cubit<AppState> {
   List<dynamic> sportEg = [];
   void getSport() {
     emit(AppLoadingGetSportState());
-    print('saeed');
+    //print('saeed');
     DioHelper.getDataSport(url: 'v2/top-headlines', query: {
       'country': 'eg',
       'category': 'sports',
       'apikey': 'd6b0614fd5e44ac7889b0105fd6a801e',
     }).then((value) {
-      print(value.data['articles']);
+     // print(value.data['articles']);
       sportEg = value.data['articles'];
-      print(sportEg[0]['title']);
+     // print(sportEg[0]['title']);
       emit(AppSuccsessGetSportState());
     }).catchError((error) {
       print(error.toString());
@@ -134,10 +134,12 @@ class AppCubit extends Cubit<AppState> {
     if (isforme != null) {
       isDark = isforme;
       emit(AppChangeModeState());
-    } else
+    } else {
       isDark = !isDark;
-    SharedPreferenceCach.putBoolean(key: 'isDark', value: isDark).then((value) {
-      emit(AppChangeModeState());
-    });
+      SharedPreferenceCach.putBoolean(key: 'isDark', value: isDark).then((
+          value) {
+        emit(AppChangeModeState());
+      });
+    }
   }
 }
